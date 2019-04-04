@@ -13,7 +13,7 @@ namespace PetCareTests
         public void GoogleTest()
         {
             using (var driver = new ChromeDriver())
-            {
+            { 
                 driver.Navigate().GoToUrl("https://google.com");
                 var searchInput = driver.FindElement(By.Name("q"));
                 searchInput.SendKeys("spring");
