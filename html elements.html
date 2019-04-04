@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<meta charset="UTF-8"> 
+	<style>
+		body {
+			background-color: #eeeeee;
+			width: 1150px;
+		}
+		div {
+			width: 500px;
+			padding: 10px;
+			border: 1px solid purple;
+			margin: 5px;
+			background-color: white;
+			float: left;
+			min-height: 25px;
+		}
+		
+		th, td {
+			padding: 3px;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<a href="http://google.com" target="_blank">Click me to open something</a>
+	</div>
+	<div>
+		<div style="display: none;">
+			<input id="poorInput"/>
+		</div>
+		<input id="poorInput"/>
+	</div>
+	<div>
+		<input type="checkbox" name="firstCheckbox" id="cb1"/>&nbsp;<label for="cb1">First element</label><br/>
+		<input type="checkbox" id="cb2"/>&nbsp;<label for="cb2">Second element</label><br/>
+		<input type="checkbox" id="cb3" disabled="disabled"/>&nbsp;<label for="cb3" disabled="disabled" style="color: grey;">Third element</label> 
+	</div>
+	<div>
+		<input type="radio" name="radio"/>
+		<input type="radio" name="radio"/>
+		<input type="radio" name="radio"/>
+	</div>
+	<div>
+		<input type="button" value="click me"/>
+	</div>
+	<div>
+		<button>click more</button>
+	</div>
+	<div>
+		<textarea cols="50" rows="5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+	</div>
+	<div>
+		<select>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+			<option>Option 5</option>
+		</select>
+	</div>
+	<div>
+		<select size="5" multiple="true">
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+			<option>Option 4</option>
+			<option>Option 5</option>
+			<option>Option 6</option>
+			<option>Option 7</option>
+		</select>
+	</div>
+	<div>
+		<table border="1">
+			<thead>
+			<tr>
+				<th>Col 1</th>
+				<th>Col 2</th>
+				<th>Col 3</th>
+				<th>Col 4</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>1.1</td>
+				<td>1.2</td>
+				<td>1.3</td>
+				<td>1.4</td>
+			</tr>
+			<tr>
+				<td>2.1</td>
+				<td>2.2</td>
+				<td>2.3</td>
+				<td>2.4</td>
+			</tr>
+			<tr>
+				<td>3.1</td>
+				<td>3.2</td>
+				<td>3.3</td>
+				<td>3.4</td>
+			</tr>
+			<tr>
+				<td>4.1</td>
+				<td>4.2</td>
+				<td>4.3</td>
+				<td>4.4</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<img src="data:image/png;base64,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"/>
+	</div>
+	<div>
+		<h1>Title</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<h2>Subtitle</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+	<div>
+		<ol>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+		</ol>
+	</div>
+	<div>
+		<ul>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+			<li>List Item</li>
+		</ul>
+	</div>
+	<div>
+		<img src="http://nitro.duckdns.org/Pets.QA/images/kitten.gif" style="width: 500px;"/>
+	</div>
+</body>
+</html>
