@@ -262,12 +262,13 @@ namespace PetCareTests
             }
         }
         // Additional: 4 4.	Take a phone number in format 888888 8888 and format it to (888) 888-8888
+        
         [Test]
         public void Task4()
         {
             string phoneNumber = "1234567890";
-            double phone = Double.Parse(phoneNumber);
-            Console.WriteLine($"Correct Phone number is {String.Format("{0:(###) ###-####}", phone)}");
+           //double phone = Double.Parse(phoneNumber);
+            Console.WriteLine($"Correct Phone number is {String.Format("{0:(###) ###-####}", Convert.ToInt64(phoneNumber))}");
         }
         // Additional: 5. Capitalize a first letter of a string
         [Test]

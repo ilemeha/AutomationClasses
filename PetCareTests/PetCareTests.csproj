@@ -58,8 +58,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CareRequestTest.cs" />
     <Compile Include="Chapter6.cs" />
     <Compile Include="HMChapter6.cs" />
+    <Compile Include="Methods\LoginMethods.cs" />
     <Compile Include="Tutorial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
