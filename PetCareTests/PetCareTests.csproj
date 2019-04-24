@@ -58,16 +58,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CareRequestTest.cs" />
+    <Compile Include="Pages\ContactMePage.cs" />
+    <Compile Include="Pages\RequestSummaryPage.cs" />
+    <Compile Include="Tests\CareRequestTest.cs" />
     <Compile Include="Chapter6.cs" />
     <Compile Include="HMChapter6.cs" />
     <Compile Include="Methods\LoginMethods.cs" />
+    <Compile Include="Pages\CareRequestPage.cs" />
+    <Compile Include="Pages\NavigationMenuPage.cs" />
+    <Compile Include="Tests\CareRequestMenuTest.cs" />
+    <Compile Include="Tests\ContactPageTest.cs" />
     <Compile Include="Tutorial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
