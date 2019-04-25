@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using PetCareTests.Pages;
+using PetCareTests.TestData;
 using Shouldly;
 
 
@@ -16,10 +17,9 @@ namespace PetCareTests.Tests
         [Test]
         public void CareRequestPageTest()
         {
-            var testPhoneNumber = "7733969481";
-            var testEmail = "lemeha.iryna@gmail.com";
-            var firstNameValue = "iryna";
-            var lastNameValue = "Lemeha";
+            var person = new Person();
+         
+          
             
 
             using (var driver = new ChromeDriver())
@@ -31,7 +31,7 @@ namespace PetCareTests.Tests
 
                 //Fill out form
                 var careRequestPage = new CareRequestPage(driver);
-                careRequestPage.FillOutContactInformation(firstNameValue,lastNameValue,testPhoneNumber,testEmail);
+                careRequestPage.FillOutContactInformation(person);
                 //Choose a pet by checking checkbox , Choose amount of pets in the dropdown
                 careRequestPage.RequestCatCare("3+");
                 //Choose number of visit per day //Choose how many times per day
@@ -58,10 +58,10 @@ namespace PetCareTests.Tests
 
 
                 Console.WriteLine(modalText);
-                modalText.ShouldContain($"Phone #: {testPhoneNumber}");
-                modalText.ShouldContain($"Email: {testEmail}");
-                modalText.ShouldContain($"First Name: {firstNameValue}");
-                modalText.ShouldContain($"Last Name: {lastNameValue}");
+                modalText.ShouldContain($"Phone #: {person.PhoneNumber}");
+                modalText.ShouldContain($"Email: {person.Email}");
+                modalText.ShouldContain($"First Name: {person.FirstName}");
+                modalText.ShouldContain($"Last Name: {person.LastName}");
 
                 requestSummaryPage.CloseModal();
             }

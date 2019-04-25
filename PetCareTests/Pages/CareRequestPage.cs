@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+using PetCareTests.TestData;
 
 namespace PetCareTests.Pages
 {
@@ -31,12 +32,12 @@ namespace PetCareTests.Pages
         private IWebElement CommentsTextArea => _driver.FindElement(By.Id("comments"));
         private IWebElement SendRequestButton => _driver.FindElement(By.Id("requestButton"));
 
-        public void FillOutContactInformation(string firstName, string lastName, string phone, string email)
+        public void FillOutContactInformation(Person person)
         {
-            FirstNameInput.SendKeys(firstName);
-            LastNameInput.SendKeys(lastName);
-            PhoneNumberInput.SendKeys(phone);
-            EmailInput.SendKeys(email);
+            FirstNameInput.SendKeys(person.FirstName);
+            LastNameInput.SendKeys(person.LastName);
+            PhoneNumberInput.SendKeys(person.PhoneNumber);
+            EmailInput.SendKeys(person.Email);
         }
 
         public void RequestCatCare(string numberOfCats)

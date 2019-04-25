@@ -15,12 +15,6 @@ namespace PetCareTests.Tests
         [Test]
         public void ContactMePageTest()
         {
-           // var textNumber = "7733969481";
-           // var textEmail = "lemeha.iryna@gmail.com";
-           // var textFName = "First Name";
-            //var textLName = "Lemeha";
-
-
             using (var driver = new ChromeDriver())
             {
                 driver.Navigate().GoToUrl("http://nitro.duckdns.org/Pets.QA/index.html");
@@ -31,13 +25,10 @@ namespace PetCareTests.Tests
                 contactMenuPage.GeContactPagetHeaderText().ShouldBe("Contact Me");
 
                 contactMenuPage.GetPageText().ShouldContain("If you want");
-                contactMenuPage.GetPagePhone();
-                contactMenuPage.GetPageEmail();
-                contactMenuPage.OpenCareRequestPage();
-
-
-              
-
+                contactMenuPage.GetPagePhone().ShouldContain("");
+                contactMenuPage.GetPageEmail().ShouldContain("");
+                contactMenuPage.OpenCareRequestPage() ;
+     
             }
             
         }
