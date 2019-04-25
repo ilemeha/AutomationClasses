@@ -18,6 +18,15 @@ namespace PetCareTests.Pages
         private IWebElement CloseSubmitButton=> _driver.FindElement(By.XPath("//button[.='Close']"));
         private IWebElement OrderVerification => _driver.FindElement(By.ClassName("modal-body"));
 
+        public void CloseModal()
+        {
+            CloseSubmitButton.Click();
+        }
+
+        public string GetModalText()
+        {
+            return OrderVerification.Text;
+        }
       
     }
 }

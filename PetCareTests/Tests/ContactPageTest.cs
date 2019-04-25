@@ -26,27 +26,17 @@ namespace PetCareTests.Tests
                 driver.Navigate().GoToUrl("http://nitro.duckdns.org/Pets.QA/index.html");
                 var contactMenuPage = new ContactMePage(driver);
                 
-                contactMenuPage.OpenWebsitePage();
-                Thread.Sleep(1000);
-                contactMenuPage.GetHeaderText();
-                contactMenuPage.GetPageText();
+                contactMenuPage.OpenContactPage();
+                    
+                contactMenuPage.GeContactPagetHeaderText().ShouldBe("Contact Me");
+
+                contactMenuPage.GetPageText().ShouldContain("If you want");
                 contactMenuPage.GetPagePhone();
                 contactMenuPage.GetPageEmail();
                 contactMenuPage.OpenCareRequestPage();
 
 
-                Thread.Sleep(1000);
-
-                //var verifyCareRequestPageOpened = driver.FindElement(By.XPath("//h1[contains(.,'Care Request'"));
-
-                //var modal = driver.FindElement(By.ClassName("page-home"));
-                //var modalText = modal.Text;
-
-               // Console.WriteLine(modalText);
-               // modalText.ShouldContain($"Phone #: {textNumber}");
-               // modalText.ShouldContain($"Email: {textEmail}");
-               // modalText.ShouldContain($"First Name: {textFName}");
-               // modalText.ShouldContain($"Last Name: {textLName}");
+              
 
             }
             

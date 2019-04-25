@@ -20,18 +20,19 @@ namespace PetCareTests.Pages
         private IWebElement ContactPageHeader => driver.FindElement(By.ClassName("title"));
         private IWebElement ContactPageText => driver.FindElement(By.XPath("//p[contains(.,'If you want')]"));
         private IWebElement ContactPagePhone => driver.FindElement(By.XPath("//div[@class='contact']//ul//li[1]"));
-        private IWebElement ContactPageEmail => driver.FindElement(By.XPath("a[.='vova64@gmail.com']"));
+        private IWebElement ContactPageEmail => driver.FindElement(By.XPath("//a[.='vova64@gmail.com']"));
         private IWebElement SubmitCareRequest => driver.FindElement(By.LinkText("care request"));
 
-        public void OpenWebsitePage()
+        public void OpenContactPage()
         {
             ContactPageMenuItem.Click();
         }
 
-        public string GetHeaderText()
+        public string GeContactPagetHeaderText()
         {
             return ContactPageHeader.Text;
         }
+        
         public string GetPageText()
         {
             return ContactPageText.Text;

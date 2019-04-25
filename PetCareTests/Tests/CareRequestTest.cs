@@ -47,19 +47,23 @@ namespace PetCareTests.Tests
                 //requestButton.Click();
                 careRequestPage.ClickRequestButton();
 
-                Thread.Sleep(1000);
-             
-                var closeButton = driver.FindElementByXPath("//button[.='Close']");
+                //var requestSummaryPage = new RequestSummaryPage();
+               // var username = requestSummaryPage.GetUserName();
+               // username.ShouldBe("Vova S");
 
-                var modal = driver.FindElement(By.ClassName("modal-body"));
-                var modalText = modal.Text;
+
+                Thread.Sleep(1000);
+                var requestSummaryPage = new RequestSummaryPage(driver);
+                var modalText = requestSummaryPage.GetModalText();
+
+
                 Console.WriteLine(modalText);
                 modalText.ShouldContain($"Phone #: {testPhoneNumber}");
                 modalText.ShouldContain($"Email: {testEmail}");
                 modalText.ShouldContain($"First Name: {firstNameValue}");
                 modalText.ShouldContain($"Last Name: {lastNameValue}");
 
-                closeButton.Click();
+                requestSummaryPage.CloseModal();
             }
         }
     }
