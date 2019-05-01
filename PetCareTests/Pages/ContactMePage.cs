@@ -19,9 +19,10 @@ namespace PetCareTests.Pages
         private IWebElement ContactPageMenuItem => driver.FindElement(By.LinkText("Contact"));
         private IWebElement ContactPageHeader => driver.FindElement(By.ClassName("title"));
         private IWebElement ContactPageText => driver.FindElement(By.XPath("//p[contains(.,'If you want')]"));
-        private IWebElement ContactPagePhone => driver.FindElement(By.XPath("//div[@class='contact']//ul//li[1]"));
+        private IWebElement ContactPagePhone => driver.FindElement(By.XPath("//div[@class='contact']//ul//li[2]"));
         private IWebElement ContactPageEmail => driver.FindElement(By.XPath("//a[.='vova64@gmail.com']"));
         private IWebElement SubmitCareRequest => driver.FindElement(By.LinkText("care request"));
+        private IWebElement CareRequestPageTitle => driver.FindElement(By.TagName("h1"));
 
         public void OpenContactPage()
         {
@@ -48,6 +49,10 @@ namespace PetCareTests.Pages
         public void OpenCareRequestPage()
         {
             SubmitCareRequest.Click();
+        }
+        public string GetCareRequestTitle()
+        {
+            return CareRequestPageTitle.Text;
         }
     }
 

@@ -25,10 +25,10 @@ namespace PetCareTests.Tests
                 contactMenuPage.GeContactPagetHeaderText().ShouldBe("Contact Me");
 
                 contactMenuPage.GetPageText().ShouldContain("If you want");
-                contactMenuPage.GetPagePhone().ShouldContain("");
-                contactMenuPage.GetPageEmail().ShouldContain("");
-                contactMenuPage.OpenCareRequestPage() ;
-     
+                contactMenuPage.GetPagePhone().ShouldBe("773-800-9646");
+                contactMenuPage.GetPageEmail().ShouldBe("vova64@gmail.com");
+                contactMenuPage.OpenCareRequestPage();
+                contactMenuPage.GetCareRequestTitle().ShouldBe("Care Request");
             }
             
         }
