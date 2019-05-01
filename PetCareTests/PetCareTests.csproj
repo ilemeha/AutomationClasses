@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\ContactMePage.cs" />
+    <Compile Include="Pages\PracticalTasksCh7.cs" />
     <Compile Include="Pages\RequestSummaryPage.cs" />
     <Compile Include="TestData\Person.cs" />
     <Compile Include="Tests\CareRequestTest.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Pages\NavigationMenuPage.cs" />
     <Compile Include="Tests\CareRequestMenuTest.cs" />
     <Compile Include="Tests\ContactPageTest.cs" />
+    <Compile Include="Tests\PracticalCh7Test.cs" />
     <Compile Include="Tutorial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

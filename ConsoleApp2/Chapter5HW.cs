@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    class HMChapter5
+    class Chapter5HW
     {
         static void Main(string[] args)
         {
