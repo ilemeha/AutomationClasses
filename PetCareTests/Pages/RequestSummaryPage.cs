@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace PetCareTests.Pages
+namespace PetCarePage.Pages
 {
     public class RequestSummaryPage
     {

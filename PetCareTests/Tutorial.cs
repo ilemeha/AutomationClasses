@@ -4,7 +4,7 @@ using OpenQA.Selenium.Chrome;
 using Shouldly;
 using System;
 
-namespace PetCareTests
+namespace PetCarePage
 {
     [TestFixture]
     public class Tutorial

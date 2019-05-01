@@ -4,10 +4,10 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using PetCareTests.Pages;
+using PetCarePage.Pages;
 using Shouldly;
 
-namespace PetCareTests.Tests
+namespace PetCarePage.Tests
 {
     [TestFixture]
     public class ContactPageTest

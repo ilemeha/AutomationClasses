@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PetCareTests.TestData
+namespace PetCarePage.TestData
 {
     public class Person
     {

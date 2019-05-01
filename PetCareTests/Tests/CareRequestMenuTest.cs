@@ -1,14 +1,14 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using PetCareTests.Pages;
+using PetCarePage.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PetCareTests.Tests
+namespace PetCarePage.Tests
 {
     [TestFixture]
     public class CareRequestMenuTest

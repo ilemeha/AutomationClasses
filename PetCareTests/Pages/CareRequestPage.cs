@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using PetCareTests.TestData;
+using PetCarePage.TestData;
 
-namespace PetCareTests.Pages
+namespace PetCarePage.Pages
 {
     public class CareRequestPage
     {

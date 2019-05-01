@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 
-namespace PetCareTests.Pages
+namespace PetCarePage.Pages
 {
     public class PracticalTasksCh7
     {
@@ -13,6 +13,7 @@ namespace PetCareTests.Pages
          * $XX.XX and returns a total price. Call this method from a different class */
         public static double TotalPrice(string num1, string num2)
         {
+            
             return (Convert.ToDouble(num1.Replace("$", String.Empty)) + Convert.ToDouble(num2.Replace("$", String.Empty)));
         }
 
@@ -20,6 +21,7 @@ namespace PetCareTests.Pages
          * Call the method from another class */
         public static int RectangArea(int length, int width)
         {
+            
             return length * width;
         }
 
@@ -27,7 +29,7 @@ namespace PetCareTests.Pages
          *  The number should be passed into the method as parameters */
         public static int SmallOfThree(int number1, int number2, int number3)
         {
-
+           
             int smallNumber = Math.Min(number1, number2);
             int smallNumber2 = Math.Min(smallNumber, number3);
             return smallNumber2;
@@ -39,6 +41,7 @@ namespace PetCareTests.Pages
          * If not - "Incorect username or password" */
         public static string LoginMatches(string username, string password)
         {
+           
             string loginStatus;
             if (username == "Iryna" && password == "Chicago1")
             {
@@ -52,25 +55,4 @@ namespace PetCareTests.Pages
             return loginStatus;
         }
     }
-    class Caller
-    {
-        static void Main()
-        {
-            Console.WriteLine($"The total price of your two numbers is {PracticalTasksCh7.TotalPrice("$35.80", "$67.87")}");
-            Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine($"The restangle Area is {PracticalTasksCh7.RectangArea(23, 12)}");
-            Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine($" {PracticalTasksCh7.LoginMatches("Iryna", "Chicago1")}");
-            Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine($"The smallest number is { PracticalTasksCh7.SmallOfThree(23, 12, 34)}");
-            Console.ReadKey();
-            Console.Clear();
-
-
-        }
-    }
-    
 }
