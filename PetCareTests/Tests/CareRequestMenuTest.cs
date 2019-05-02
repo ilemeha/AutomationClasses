@@ -22,7 +22,10 @@ namespace PetCarePage.Tests
             {
                 driver.Navigate().GoToUrl(Config.GetURL());
                 var naviMenuPage = new NavigationMenuPage(driver);
-                naviMenuPage.OpenPicturesPage();
+                if (Config.GetEnviroment() == "PROD")
+                {
+                    naviMenuPage.OpenPicturesPage();
+                }
                 naviMenuPage.OpenCareRequestPage();
             }
         }
