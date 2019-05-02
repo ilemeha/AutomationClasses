@@ -2,6 +2,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using PetCarePage.Pages;
+using PetCareTests.Configuration;
+using PetCareTests.WebDriver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +18,9 @@ namespace PetCarePage.Tests
         [Test]
         public void MenuTest()
         {
-            using (var driver = new ChromeDriver())
+            using (var driver = DriverUtils.CreateWebDriver())
             {
-                driver.Navigate().GoToUrl("http://nitro.duckdns.org/Pets.QA/index.html");
+                driver.Navigate().GoToUrl(Config.GetURL());
                 var naviMenuPage = new NavigationMenuPage(driver);
                 naviMenuPage.OpenPicturesPage();
                 naviMenuPage.OpenCareRequestPage();

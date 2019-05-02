@@ -6,6 +6,8 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using PetCarePage.Pages;
 using PetCarePage.TestData;
+using PetCareTests.Configuration;
+using PetCareTests.WebDriver;
 using Shouldly;
 
 
@@ -18,13 +20,10 @@ namespace PetCarePage.Tests
         public void CareRequestPageTest()
         {
             var person = new Person();
-         
-          
-            
 
-            using (var driver = new ChromeDriver())
+            using (var driver = DriverUtils.CreateWebDriver())
             {
-                driver.Navigate().GoToUrl("http://nitro.duckdns.org/Pets.QA/index.html");
+                driver.Navigate().GoToUrl(Config.GetURL());
 
                 var navigationMenuPage = new NavigationMenuPage(driver);
                 navigationMenuPage.OpenCareRequestPage();
